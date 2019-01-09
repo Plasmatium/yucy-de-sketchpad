@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <img class="bg-img" src="http://wx4.sinaimg.cn/large/d8eedf34gy1fxelf4x3fkj212w0px4qq.jpg">
+    <sketchpad></sketchpad>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import Sketchpad from './components/Sketchpad.vue';
 
 export default Vue.extend({
   name: 'app',
   components: {
-    HelloWorld,
+    Sketchpad,
   },
 });
 </script>
@@ -24,6 +24,11 @@ export default Vue.extend({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 </style>
