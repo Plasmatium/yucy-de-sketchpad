@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img class="bg-img" src="http://wx4.sinaimg.cn/large/d8eedf34gy1fxelf4x3fkj212w0px4qq.jpg">
+    <img class="bg-img" src="http://5b0988e595225.cdn.sohucs.com/images/20181212/da40e0fca16e4441a52654a14140801a.jpeg">
     <sketchpad></sketchpad>
   </div>
 </template>
@@ -26,6 +26,7 @@ export default Vue.extend({
   color: #2c3e50;
 }
 .bg-img {
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;

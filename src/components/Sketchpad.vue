@@ -27,6 +27,25 @@ export default Vue.extend({
 
     // this.loadImg('http://wx4.sinaimg.cn/large/d8eedf34gy1fxelf4x3fkj212w0px4qq.jpg');
     this.drawMask();
+
+    cv.addEventListener('touchstart', (ev) => {
+      ev.preventDefault();
+      const {clientX, clientY} = ev.touches[0];
+      const mockEV = {x: clientX, y: clientY} as any;
+      this.startDrawing(mockEV);
+    });
+    cv.addEventListener('touchmove', (ev) => {
+      ev.preventDefault();
+      const {clientX, clientY} = ev.touches[0];
+      const mockEV = {x: clientX, y: clientY} as any;
+      this.drawing(mockEV);
+    });
+    cv.addEventListener('touchEnd', (ev: any) => {
+      ev.preventDefault();
+      const {clientX, clientY} = ev.touches[0];
+      const mockEV = {x: clientX, y: clientY} as any;
+      this.endDrawing(mockEV);
+    });
   },
 
   methods: {
